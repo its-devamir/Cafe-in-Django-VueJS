@@ -55,7 +55,7 @@ ROOT_URLCONF = 'cafe_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ["cafe/templates","cafe/templates/cafe"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -75,18 +75,18 @@ WSGI_APPLICATION = 'cafe_project.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
-    # }
     'default': {
-        'ENGINE': 'django.db.backends.mysql',  # assuming you're using MySQL
-        'NAME': 'cafe_db',
-        'USER': 'your_db_user',
-        'PASSWORD': 'your_db_password',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'cafe_db',
+    #     'USER': 'your_db_user',
+    #     'PASSWORD': 'your_db_password',
+    #     'HOST': 'localhost',
+    #     'PORT': '3306',
+    # }
 }
 
 
